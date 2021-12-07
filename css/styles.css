@@ -8,7 +8,6 @@
   --bg-color-3: 222, 226, 230;
   --blue: 36, 48, 216;
   --red: 200, 20, 20;
-  /* --black: 52, 58, 64; */
   --black: 0, 0, 0;
   --white: 248, 249, 250;
 }
@@ -76,6 +75,12 @@ h1 {
   justify-content: center;
 }
 
+@media (max-width: 48rem) {
+  .list__form > * {
+    flex: 1 1 1rem;
+  }
+}
+
 .list__input {
   background-color: rgb(var(--bg-color-1));
   border-radius: .25em;
@@ -84,6 +89,7 @@ h1 {
   color: rgb(var(--font-color-1));
   display: inline-flex;
   font-family: var(--font-family-1);
+  font-size: 1.1rem;
   padding: .25em;
   outline: none;
 }
@@ -212,7 +218,7 @@ button:active {
   display: block;
   font-family: var(--font-family-2);
   margin: 1em auto 0;
-  padding: .5em .75em;
+  padding: .75em 1.5em;
 }
 
 .add-button {
@@ -220,7 +226,7 @@ button:active {
   border: none;
   color: rgb(var(--white));
   font-family: var(--font-family-2);
-  padding: .5em .75em;
+  padding: .75em 1.5em;
 }
 
 .link-button {
