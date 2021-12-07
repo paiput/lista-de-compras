@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- google-fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&family=Patrick+Hand&family=Rubik&display=swap" rel="stylesheet"> 
+  <title>Lista de compras</title>
+</head>
+<body>
+  <h1>Lista de compras</h1>
+  <nav class="nav-menu">
+    <div class="theme-switch-wrapper">
+      <label for="theme-checkbox" class="theme-switch">
+        <input type="checkbox" id="theme-checkbox">
+        <div class="slider round"></div>
+      </label>
+      <em>Darkmode</em>
+    </div>
+    <a href="./html/types.html" class="link-button add-button">Configurar secciones</a>
+  </nav>
+  <div class="list-container">
+    <form id="shopping-list__form" class="list__form">
+      <input id="shopping-list__product-input" class="list__input" type="text" placeholder="producto">
+      <select name="" id="product-type-selector" class="list__input">
+        <option value="">-</option>
+      </select>
+      <button id="shopping-list__submit-btn" class="add-button" type="submit">Agregar</button>
+    </form>
+    <div id="shopping-list__sections-container" class="list__sections-container">
+      <section class="list__section">
+        <ul id="shopping-list" class="ul">
+
+        </ul>
+      </section>
+    </div>
+    <button id="delete-all-button">borrar todo</button>
+  </div>
+  <script src="./js/main.js"></script>
+  <script src="./js/darkMode.js"></script>
+</body>
+</html>

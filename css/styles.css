@@ -1,0 +1,241 @@
+:root {
+  --font-color-1: 52, 58, 64;
+  --font-color-2: 206, 212, 218;
+  --font-family-1: 'Patrick Hand', cursive, 'Indie Flower';
+  --font-family-2: 'Rubik', sans-serif;
+  --bg-color-1: 248, 249, 250;
+  --bg-color-2: 233, 236, 239;
+  --bg-color-3: 222, 226, 230;
+  --blue: 36, 48, 216;
+  --red: 200, 20, 20;
+  /* --black: 52, 58, 64; */
+  --black: 0, 0, 0;
+  --white: 248, 249, 250;
+}
+
+[data-theme="dark"] {
+  --font-color-1: 233, 236, 239;
+  --font-color-2: 73, 80, 87;
+  --bg-color-1: 33, 37, 41;
+  --bg-color-2: 52, 58, 64;
+}
+
+html {
+  color: rgb(var(--font-color-1));
+  font-family: var(--font-family-1);
+}
+
+@media (max-width: 48rem) {
+  html {
+    font-size: .9rem;
+  }
+}
+
+body {
+  background-color: rgb(var(--bg-color-1));
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* menu de navegacion */
+.nav-menu {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+  justify-content: center;
+}
+/*menu de navegacion */
+
+/* lista de compras */
+.list-container {
+  background-color: rgb(var(--bg-color-1));
+  border-radius: .25em;
+  box-shadow: 0 0 1em .2em rgba(var(--black), .1);
+  margin: .75em;
+  min-width: 250px;
+  padding: 1rem;
+  /* width: 100%; */
+}
+
+@media (min-width: 48rem) {
+  .list-container {
+    margin: .5em auto;
+    width: 40%;
+  }
+}
+
+.list__form {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center;
+}
+
+.list__input {
+  background-color: rgb(var(--bg-color-1));
+  border-radius: .25em;
+  border: 2px solid rgba(var(--black), .75);
+  caret-color: rgb(var(--font-color-1));
+  color: rgb(var(--font-color-1));
+  display: inline-flex;
+  font-family: var(--font-family-1);
+  padding: .25em;
+  outline: none;
+}
+
+.ul {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.ul > * + * {
+  margin-top: .5em;
+}
+
+.list__item {
+  background-color: rgb(var(--bg-color-2));
+  cursor: default;
+  display: flex;
+  font-size: 1.1rem;
+  justify-content: space-between;
+  padding: .5em;
+}
+/* /lista de compras */
+
+/* switch de modo oscuro */
+.theme-switch-wrapper {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 26px;
+  position: relative;
+  width: 52px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: rgb(204, 204, 204);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all ease .4s;
+}
+
+.slider::before {
+  background-color: rgb(255, 255, 255);
+  bottom: 4px;
+  content: "";
+  height: 18px;
+  left: 4px;
+  position: absolute;
+  transition: transform ease .4s;
+  width: 18px;
+}
+
+input:checked + .slider {
+  background-color: rgb(102, 187, 106);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (min-width: 26.5rem) {
+  .theme-switch-wrapper {
+    margin: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .theme-switch {
+    height: 34px;
+    width: 60px;
+  }
+
+  .slider::before {
+    height: 26px;
+    width: 26px;
+  }
+}
+/* /switch de modo oscuro */
+
+/* botones */
+button {
+  cursor: pointer;
+  border-radius: .25em;
+}
+
+button:active {
+  opacity: .8;
+}
+
+.icon-button {
+  border: none;
+  display: inline-grid;
+  padding: .5em;
+  place-items: center;
+}
+
+.icon-button.delete-button {
+  background-color: rgb(var(--bg-color-1));
+  color: rgb(var(--red));
+}
+
+#delete-all-button {
+  background-color: rgb(var(--red));
+  border: none;
+  color: rgb(var(--white));
+  display: block;
+  font-family: var(--font-family-2);
+  margin: 1em auto 0;
+  padding: .5em .75em;
+}
+
+.add-button {
+  background-color: rgb(var(--blue));
+  border: none;
+  color: rgb(var(--white));
+  font-family: var(--font-family-2);
+  padding: .5em .75em;
+}
+
+.link-button {
+  border-radius: .25em;
+  font-family: var(--font-family-2);
+  text-decoration: none;
+}
+/* /botones */
+
+.done {
+  background-color: rgba(var(--bg-color-2), .3);
+  color: rgb(var(--font-color-2));
+  text-decoration: line-through;
+}
+
+.hidden {
+  display: none;
+}
