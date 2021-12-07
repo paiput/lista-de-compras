@@ -2,6 +2,7 @@ const form = document.getElementById('product-type-form');
 const selectionInput = document.getElementById('section-input');
 const productTypesUl = document.getElementById('product-types-list');
 
+const getShoppingList = () => JSON.parse(localStorage.getItem('shoppingList'));
 const getProductTypes = () => JSON.parse(localStorage.getItem('productTypes'));
 
 const createTypeItem = (type) => {
@@ -17,6 +18,9 @@ const createTypeItem = (type) => {
     const productTypes = getProductTypes();
     const updatedProductTypes = productTypes.filter(item => item !== type);
     localStorage.setItem('productTypes', JSON.stringify(updatedProductTypes));
+    const shoppingList = getShoppingList();
+    const updatedShoppingList = shoppingList.filter(item => item.type !== type);
+    localStorage.setItem('shoppingList', JSON.stringify(updatedShoppingList));
     li.remove();
   });
 
