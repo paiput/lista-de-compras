@@ -189,6 +189,13 @@ input:checked + .slider:before {
 }
 /* /switch de modo oscuro */
 
+/* footer */
+.footer-menu .links-container {
+  margin: 2rem 0;
+  text-align: center;
+}
+/* /footer */
+
 /* botones */
 button {
   cursor: pointer;
@@ -197,6 +204,10 @@ button {
 
 button:active {
   opacity: .8;
+}
+
+.big-button {
+  font-size: 2.5rem;
 }
 
 .icon-button {
@@ -209,16 +220,6 @@ button:active {
 .icon-button.delete-button {
   background-color: rgb(var(--bg-color-1));
   color: rgb(var(--red));
-}
-
-#delete-all-button {
-  background-color: rgb(var(--red));
-  border: none;
-  color: rgb(var(--white));
-  display: block;
-  font-family: var(--font-family-2);
-  margin: 1em auto 0;
-  padding: .75em 1.5em;
 }
 
 .add-button {
@@ -234,7 +235,23 @@ button:active {
   font-family: var(--font-family-2);
   text-decoration: none;
 }
+
+#delete-all-button {
+  background-color: rgb(var(--red));
+  border: none;
+  color: rgb(var(--white));
+  display: block;
+  font-family: var(--font-family-2);
+  margin: 1em auto 0;
+  padding: .75em 1.5em;
+}
 /* /botones */
+
+/* links */
+.github-link {
+  color: rgb(var(--font-color-1));
+}
+/* /links */
 
 .done {
   background-color: rgba(var(--bg-color-2), .3);
